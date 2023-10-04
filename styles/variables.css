@@ -13,4 +13,7 @@
   /* градиент для повторяющихся полос сверху вниз */
   repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
   /* градиент для равномерного перехода сверху вниз */
-  linear-gradient(to bottom, #e7e7e7, #1a1a1a);}
+  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --watermark-color: #000;
+  --watermark-stroke-color: #fff;
+}
