@@ -16,4 +16,6 @@
   linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --watermark-color: #000;
   --watermark-stroke-color: #fff;
+  --button-text-color: #fff;
+  --heart-fill: #FF0000;
 }

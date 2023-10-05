@@ -21,6 +21,8 @@
     linear-gradient(to bottom, #007f0c, #004306);
     --watermark-color: #00CC14;
     --watermark-stroke-color: #000;
+    --button-text-color: #00CC14;
+    --heart-fill: #FF0000;
     
 }
 
@@ -40,4 +42,6 @@
     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --watermark-color: #000;
   --watermark-stroke-color: #fff;
+  --button-text-color: #fff;
+  --heart-fill: #FF0000;
 }
