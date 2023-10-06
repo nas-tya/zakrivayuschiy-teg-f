@@ -64,6 +64,10 @@
   font-size: clamp(0.875rem, 0.6798rem + 0.8419vw, 1.4375rem);
 }
 
+.link {
+  text-decoration: none;
+}
+
 .theme-menu {
   display: flex;
   justify-content: center;
@@ -188,9 +192,16 @@
     -1px -1px var(--watermark-stroke-color);
 }
 
-@supports (webkit-text-stroke: 1px var(--watermark-stroke-color)) {
+@supports (-webkit-text-stroke: 1px var(--watermark-stroke-color)) {
   .card__image-watermark {
     -webkit-text-stroke: 1px var(--watermark-stroke-color);
+    text-shadow: none;
+  }
+}
+
+@supports (text-stroke: 1px var(--watermark-stroke-color)) {
+  .card__image-watermark {
+    text-stroke: 1px var(--watermark-stroke-color);
     text-shadow: none;
   }
 }
