@@ -31,7 +31,7 @@
 .header {
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
-  height: clamp(20.1875rem, 19.2982rem + 3.8354vw, 22.75rem);
+  padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   width: clamp(23.1875rem, 16.138rem + 30.4022vw, 43.5rem);
   display: flex;
   flex-direction: column;
@@ -136,16 +136,6 @@
   animation: marker 0.5s infinite ease-in-out alternate;
 }
 
-@keyframes marker {
-  0% {
-    translate: 0;
-  }
-
-  100% {
-    translate: 2px;
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -162,7 +152,8 @@
   border-bottom: 2px solid var(--accent-color);
   color: var(--accent-color);
   font-size: 18px;
-  font-weight: var(--font-weight-title);
+  /* font-weight: var(--font-weight-title); */
+  font-variation-settings: "wght" var(--font-weight-title);
   padding: 4px 10px;
 }
 
@@ -324,83 +315,16 @@
   transition: fill 0.3s linear;
 }
 
-.like-icon:hover .main-body {
-  fill: var(--accent-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--accent-color);
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.06s linear;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: scaling 0.3s 0.1s ease-in alternate;
-}
-
-@keyframes scaling {
-  0% {
-    scale: 1;
-  }
-
-  100% {
-    scale: 1.5;
-  }
-}
-
 .sparks {
   opacity: 0;
 }
 
-.like-icon.is-liked .sparks {
-  animation: sparkling 0.3s 0.3s ease-in alternate;
+.kinda-footer {
+  padding: 0 0 102px 0;
+  align-self: center;
 }
 
-@keyframes sparkling {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.like-icon:not(.is-liked) .contour {
-  fill: var(--accent-color);
-}
-
-.footer {
-  padding: 54px 32px 102px 32px;
-}
-
-.footer__floppy {
+.kinda-footer__floppy {
   position: relative;
   width: 21px;
   height: 21px;
@@ -409,20 +333,20 @@
   z-index: 3;
 }
 
-.footer__button {
+.kinda-footer__button {
   padding: 15px 20px;
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-.footer__dialog {
+.kinda-footer__dialog {
   background-color: var(--background-color);
   width: clamp(21.3125rem, 20.9642rem + 1.4981vw, 22.3125rem);
   padding: 30px;
 }
 
-.footer__dialog::backdrop {
+.kinda-footer__dialog::backdrop {
   opacity: 0.75;
   background-color: #000000;
 }
@@ -489,16 +413,16 @@
 }
 
 @media (width <=375px) {
-  .footer__button {
+  .kinda-footer__button {
     flex-direction: column;
   }
 
-  .footer__floppy {
+  .kinda-footer__floppy {
     width: 29px;
     height: 29px;
   }
 
-  .footer__dialog {
+  .kinda-footer__dialog {
     padding: 30px 40px;
   }
 
